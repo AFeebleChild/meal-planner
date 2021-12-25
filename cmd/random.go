@@ -16,16 +16,13 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		recipes := lib.GetRecipes()
-		//lib.PrintRecipes(recipes)
-
 		var recipe lib.Recipe
 		//Check the single IngredientQuery if anything has been passed from the flag,
 		//but use IngredientsQuery when picking a recipe by ingredient
 		if IngredientQuery == "" {
-			recipe = lib.PickRandomRecipe(recipes)
+			recipe = lib.PickRandomRecipe(AllRecipes)
 		} else {
-			recipe = lib.PickRecipeByIngredient(recipes, IngredientsQuery)
+			recipe = lib.PickRecipeByIngredient(AllRecipes, IngredientsQuery)
 		}
 		recipe.PrintRecipe()
 	},

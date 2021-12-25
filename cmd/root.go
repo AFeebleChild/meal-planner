@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"github.com/afeeblechild/meal-planner/lib"
 	"math/rand"
 	"os"
 	"strings"
@@ -10,6 +11,7 @@ import (
 )
 
 var (
+	AllRecipes []lib.Recipe
 	IngredientQuery string
 	IngredientsQuery []string
 )
@@ -29,6 +31,8 @@ to quickly create a Cobra application.`,
 	// Run: func(cmd *cobra.Command, args []string) { },
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
 		rand.Seed(time.Now().UnixNano())
+
+		AllRecipes = lib.GetRecipes()
 
 		if strings.Contains(IngredientQuery, ",") {
 			splitIngredients := strings.Split(IngredientQuery, ",")
