@@ -1,0 +1,179 @@
+- Name: Snack Plate
+  MealTypes:
+    - Snack
+  Ingredients:
+    - Name: Apple
+    - Name: Pistachios
+    - Name: Cashews
+    - Name: Peanut Butter Crackers
+- Name: Roasted Veggies
+  MealTypes:
+    - Lunch
+    - Dinner
+  Ingredients:
+    - Name: Parsnip
+      Amount: 1
+    - Name: Turnip
+      Amount: 1
+    - Name: Carrot
+      Amount: 1
+    - Name: Broccoli
+      Amount: 1
+- Name: Quesadillas
+  MealTypes:
+    - Lunch
+    - Dinner
+  Ingredients:
+    - Name: Black Beans
+      Amount: 1 Can
+    - Name: Corn
+      Amount: 1 Can
+- Name: Chicken Pot Pie
+  MealTypes:
+    - Dinner
+  Ingredients:
+    - Name: Chicken
+    - Name: Carrot
+    - Name: Celery
+    - Name: Pie Crust
+- Name: Stir Fry
+  MealTypes:
+    - Lunch
+    - Dinner
+  Ingredients:
+    - Name: Carrot
+    - Name: Potato
+    - Name: Bacon
+- Name: Chicken Lettuce Salad
+  MealTypes:
+    - Lunch
+    - Dinner
+  Ingredients:
+    - Name: Lettuce
+    - Name: Chicken Strips
+    - Name: Croutons
+    - Name: Ranch
+- Name: Chicken Salad Sandwich
+  MealTypes:
+    - Lunch
+    - Dinner
+  Ingredients:
+    - Name: Chicken
+    - Name: Bread
+- Name: Enchiladas
+  MealTypes:
+    - Dinner
+  Ingredients:
+    - Name: Tortillas
+    - Name: Enchilada Sauce
+    - Name: Black Beans
+    - Name: Chicken
+- Name: Sausage Alfredo Pasta
+  MealTypes:
+    - Dinner
+  Ingredients:
+    - Name: Italian Sausage
+    - Name: Penne
+    - Name: Alfredo
+    - Name: Broccoli
+- Name: Potato, Egg, Sausage Hash
+  MealTypes:
+    - Breakfast
+    - Lunch
+    - Dinner
+  Ingredients:
+    - Name: Potatoes
+      Amount: 4
+    - Name: Eggs
+      Amount: 6
+    - Name: Bacon
+      Amount: 6
+    - Name: Onion
+      Amount: 1/2
+- Name: Carne Asada
+  MealTypes:
+    - Dinner
+  Ingredients:
+    - Name: Steak
+- Name: Green Curry
+  MealTypes:
+    - Lunch
+    - Dinner
+  Ingredients:
+    - Name: Curry Paste
+- Name: Thai Red Curry
+- Name: Japanese Curry
+- Name: Sweet Potato Chili
+  MealTypes:
+    - Dinner
+  Ingredients:
+    - Name: Olive Oil
+      Amount: 2 Tbsp
+    - Name: Onion
+      Amount: 1
+    - Name:  Bell Pepper
+      Amount: 1
+    - Name: Garlic
+    - Name: Tomato Paste
+      Amount: 1 Tbsp
+    - Name: Italian Sausage
+      Amount: 1 lbs
+    - Name: Chili Powder
+      Amount: 1 Tbsp
+    - Name: Dried Oregano
+      Amount: 1 tsp
+    - Name: Garlic Powder
+      Amount: 1/2 tsp
+    - Name: Cayenne
+      Amount: 1/4 tsp
+    - Name: Salt
+    - Name: Pepper
+    - Name: Sweet Potatoes
+      Amount: 4
+    - Name: Chicken Broth
+      Amount: 3 cups
+    - Name: Diced Tomatoes
+      Amount: 14.5 oz can
+- Name: Salmon and Kale Ceasar Wraps
+  MealTypes:
+    - Lunch
+    - Dinner
+  Ingredients:
+    - Name: Kale
+    - Name: Parmesan Cheese
+    - Name: Caesar Dressing
+    - Name: Salmon
+    - Name: Tortillas
+- Name: Spicy Tuna Crispy Rice
+  MealTypes:
+    - Lunch
+    - Dinner
+  Ingredients:
+    - Name: Sushi Rice
+      Amount: 1 cup
+    - Name: Cane Sugar
+      Amount: 2 Tbsp
+    - Name: Smoked Ahi Tuna
+    - Name: Chipotle Mayo
+- Name: Chicken Florentine
+  MealTypes:
+    - Dinner
+  Ingredients:
+    - Name: Boneless Skinless Chicken Breasts
+      Amount: 4
+    - Name: Unsalted Butter
+      Amount: 6 Tbsp
+    - Name: Shallots
+      Amount: 2 Tbsp
+    - Name: Garlic
+      Amount:
+    - Name: Dry White Wine
+      Amount: 1.5 cups
+    - Name: Whipping Cream
+      Amount: 1 cup
+    - Name: Italian Parsley
+      Amount: 1 Tbsp
+    - Name: Spinach
+      Amount: 20 oz
+
+
