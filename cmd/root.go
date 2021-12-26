@@ -1,12 +1,15 @@
 package cmd
 
 import (
-	"github.com/afeeblechild/meal-planner/lib"
+	"html/template"
+	"log"
 	"math/rand"
+	"net/http"
 	"os"
 	"strings"
 	"time"
 
+	"github.com/afeeblechild/meal-planner/lib"
 	"github.com/spf13/cobra"
 )
 
@@ -28,7 +31,6 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
-	// Run: func(cmd *cobra.Command, args []string) { },
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
 		rand.Seed(time.Now().UnixNano())
 
@@ -42,6 +44,11 @@ to quickly create a Cobra application.`,
 		} else {
 			IngredientsQuery = append(IngredientsQuery, IngredientQuery)
 		}
+	},
+	Run: func(cmd *cobra.Command, args []string) {
+		http.HandleFunc("/", MainHandler)
+		http.HandleFunc("/random/", RandomHandler)
+		log.Fatal(http.ListenAndServe(":8080", nil))
 	},
 }
 
@@ -66,4 +73,19 @@ func init() {
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 
 	rootCmd.PersistentFlags().StringVarP(&IngredientQuery, "ingredient", "i", "", "ingredient(s) to search recipes for, comma separated")
+}
+
+func MainHandler(w http.ResponseWriter, r *http.Request) {
+	t, _ := template.ParseFiles("templates/home.html")
+	t.Execute(w, r)
+}
+
+func RandomHandler(w http.ResponseWriter, r *http.Request) {
+	randomRecipe := lib.PickRandomRecipe(AllRecipes)
+	if len(randomRecipe.Ingredients) > 0 {
+		t, _ := template.ParseFiles("templates/listRecipe.html")
+		t.Execute(w, randomRecipe)
+	}else {
+		http.Redirect(w, r, "http://"+r.Host, 302)
+	}
 }
