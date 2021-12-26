@@ -1,0 +1,13 @@
+<h1>{{.Name}}</h1>
+
+<ul>
+    {{ range .Ingredients }}
+        <li>{{ .Name }} </li>
+        {{ .Amount }}
+    {{ end }}
+</ul>
+
+<form action="/random">
+    <input type="submit" value="Get a random recipe!" />
+</form>
+
