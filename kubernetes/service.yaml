@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: meal-planner
+  labels:
+    app: meal-planner
+spec:
+  type: NodePort
+  ports:
+  - port: 6325 #Port exposed on the cluster traffic
+    targetPort: 8080 #Port to send traffic to on the pod
+    nodePort: 30303 #Port exposed on the node for external access
+  selector:
+    app: meal-planner
